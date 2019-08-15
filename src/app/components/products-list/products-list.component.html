@@ -1,0 +1,16 @@
+<div class="row">
+  <div *ngFor="let products of productsArray$ | async" class="col s12 m4">
+    <div *ngFor="let product of products" class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" [src]="product.Image">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{product.Name}}<i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{product.Name}}<i class="material-icons right">close</i></span>
+        <p>{{product.Description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
